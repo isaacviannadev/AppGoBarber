@@ -14,14 +14,14 @@ interface InputValueReference {
 }
 
 const Input: React.FC<InputProps> = ({ name, icon, ...rest }) => {
-  const { registerField, defaultValue = '', fieldName, error } = useField(name);
+  const { registerField, defaultValue = "", fieldName, error } = useField(name);
   const inputValueRef = useRef<InputValueReference>({ value: defaultValue });
-
+  
   useEffect(() => {
     registerField({
       name: fieldName,
       ref: inputValueRef.current,
-      path: 'value',
+      path: "value",
     });
   }, [fieldName, registerField]);
 
