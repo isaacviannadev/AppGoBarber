@@ -33,10 +33,10 @@ import {
   CreateAccountButtonText,
 } from "./styles";
 
-// interface SignInFormData {
-//   email: string;
-//   password: string;
-// }
+interface SignInFormData {
+  email: string;
+  password: string;
+}
 
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
